@@ -33,6 +33,7 @@ fiannce_agent = Agent(
 )
 
 multi_ai_agent = Agent(
+    model = Groq(id="llama3-groq-70b-8192-tool-use-preview"),
     team = [web_search_agent, fiannce_agent],
     instructions = ["Always include sources", "Use tables to display the data"],
     show_tools_calls = True,
